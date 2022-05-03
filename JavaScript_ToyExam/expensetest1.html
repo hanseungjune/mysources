@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>적정 지출 비용의 초과여부</title>
+</head>
+<body>
+  <script>
+    let price1 = 3000;
+    let price2 = 6000;
+    let price3 = 3000;
+    let dailyExpense = price1 + price2 + price3;
+    let overExpense = dailyExpense - 10000;
+
+    if ( dailyExpense > 10000 )
+      alert(overExpense + "원 초과하였습니다.")
+    else
+      alert("돈 관리 잘했어요!");
+
+  </script>
+
+  
+</body>
+</html>

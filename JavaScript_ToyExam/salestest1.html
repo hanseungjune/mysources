@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4분기 판매량 및 평균판매량 비교</title>
+</head>
+<body>
+  <script>
+    let quarter1 = 1200;
+    let quarter2 = 1300;
+    let quarter3 = 1000;
+    let quarter4 = parseInt(prompt("4분기 판매량을 입력해주십시오."));
+    let average = ( quarter1 + quarter2 + quarter3 + quarter4 )/4;
+
+    if ( quarter4 !== null ) {
+      if ( quarter4 >= average )
+        document.write("판매량이 평균 이상입니다.");
+      else
+        document.write("판매량이 평균 미달입니다.");
+    }
+    else
+      alert("다시 입력해주십시오.");
+
+
+  </script>
+</body>
+</html>

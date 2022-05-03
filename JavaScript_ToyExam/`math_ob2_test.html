@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title> 수학객체 </title>
+<script>
+	document.write("<h1>컴퓨터 가위, 바위, 보 맞추기</h1>"); //사실 이기는 거 아니고 똑같이 내는 거임
+	
+	let game = prompt("가위, 바위, 보 중 무엇을 낼까요?", "가위");
+	let gameNum;
+	switch(game) { // 입력한 값과 컴퓨터가 출력하는 값을 비교하기 위해서 gameNum 이라는 변수에 숫자를 넣는다.
+		case "가위": 
+			gameNum = 1;
+		break;
+		case "바위":
+		  gameNum = 2;
+		break;
+		case "보":
+			gameNum = 3;
+		break;
+		default: alert("잘못 작성하였습니다.");
+		location.reload(); //새로고침(참고)
+		}
+
+		let com = Math.ceil(Math.random()*3); //컴퓨터가 0~1에서 난수를 산출하여 해당 숫자에 3을 곱한다. 그리고 소수점을 지우기 위해서 올림작업을하면 1이나 2나 3만 나온다.
+
+		document.write("<img src=images/math_img_" + com + ".jpg>"); //컴퓨터가 출력한 값에 따라 이미지를 다르게 출력한다.
+
+		if ( gameNum == com ) { 	// 같으면 같다고 얘기(이미지출력)하고, 아니면 아니라고(이미지)출력.
+				 document.write("<img src=images/game_1.jpg>");
+		}
+		else document.write("<img src=images/game_2.jpg>");
+
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> Object 객체로 참조변수(tv, car) 객체 생성하기 </title>
+<script>
+
+	var tv = new Object(); // tv라는 참조변수를 new Object(); 하여 객체화하여 color, price 등의 속성을 이용할 수 있게됨.
+	tv.color = "white";
+	tv.price = "3,000,000원" 
+	tv.info = function() { // function() 바로 함수를 설정한다는 의미
+		document.write("tv 색상 : " + this.color, "</br>"); //this는 tv를 뜻함
+		document.write("tv 가격 : " + this.price, "</br>");
+	};
+
+	let car = new Object(); // car라는 참조변수를 new Object(); 하여 객체화하여 color, price 등의 속성을 이용할 수 있게됨.
+	car.color = "black";
+	car.price = "500,000,000원";
+	car.info = function() { // function() 바로 함수를 설정한다는 의미
+		document.write("car 색상 : " + this.color, "</br>"); //this는 car를 뜻함
+		document.write("car 가격 : " + this.price, "</br>");
+	};
+ 
+	document.write("<h1>tv 객체 메서드 호출</h1>");
+		tv.info();	// 설정된 함수를 실행
+	document.write("<h1>car 객체 메서드 호출</h1>");
+		car.info(); // 설정된 함수를 실행
+      
+</script>
+</head>
+<body>
+</body>
+</html>
